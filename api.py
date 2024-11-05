@@ -8,7 +8,6 @@ class HelloWorld(Resource):
     def get(self):
         return {"message": "Hello, World!"}, 200
 
-api.add_resource(HelloWorld, '/')
 
 class Add(Resource):
     def get(self):
@@ -21,7 +20,22 @@ class Add(Resource):
         result = num1 + num2
         return {"result": result}, 200
 
+
+class Multiply(Resource):
+    def post(self):
+        data = request.get_json()
+        num1 = data.get("num1")
+        num2 = data.get("num2")
+
+        if num1 is None or num2 is None:
+            return {"message": "JSON gövdesinde hem num1 hem de num2 gereklidir."}, 400
+        
+        result = num1 * num2
+        return {"result": result}, 200
+        
+api.add_resource(HelloWorld, '/')
 api.add_resource(Add, '/add')
+api.add_resource(Multiply, '/multiply')
 
 
 if __name__ == '__main__':
