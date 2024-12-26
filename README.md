@@ -155,14 +155,6 @@ Bu proje, aşağıdaki teknik gereksinimleri karşılamaktadır:
 
 ---
 
-## Katkıda Bulunanlar
-- **Halil İbrahim D.**
-  - Flask uygulaması geliştirme
-  - Servis yapılandırması
-  - Debian paketi oluşturma
-
----
-
 ## Lisans
 Bu proje açık kaynak olarak sunulmuştur. Herhangi bir amaçla kullanılabilir.
 
